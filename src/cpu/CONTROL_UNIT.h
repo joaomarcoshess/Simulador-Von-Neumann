@@ -2,11 +2,13 @@
 #define CONTROL_UNIT_H
 
 #include <iostream>
-#include"ALU.h"
-#include"REGISTER_BANK.h"
+#include "ALU.h"
+#include "REGISTER_BANK.h"
 #include <string>
 #include <vector>
 #include"HashRegister.h"
+#include"unordered_map"
+#include"../memory/MAINMEMORY.h"
 
 using namespace std;
 
@@ -17,6 +19,7 @@ struct Instruction_Data{
     string op;
     string addressRAMResult;
 };
+
 struct Control_Unit{
 
     operation op;
@@ -50,15 +53,15 @@ struct Control_Unit{
     string Get_target_Register(const uint32_t instruction);
     string Get_source_Register(const uint32_t instruction);
 
-    string Identificacao_instrucao(const uint32_t instruction, REGISTER_BANK &registers);
-    void Fetch(REGISTER_BANK &registers, bool &endProgram);
+    string Identificacao_instrucao(uint32_t instruction, REGISTER_BANK &registers);
+    void Fetch(REGISTER_BANK &registers, bool &endProgram,MainMemory &ram);
     void Decode(REGISTER_BANK &registers, Instruction_Data &data);
     void Execute_Aritmetic_Operation(REGISTER_BANK &registers,Instruction_Data &data);
     void Execute_Operation(REGISTER_BANK &registers,Instruction_Data &data);
     void Execute_Loop_Operation(REGISTER_BANK &registers,Instruction_Data &data, int &counter); 
     void Execute(REGISTER_BANK &registers, Instruction_Data &data, int &counter);
-    void Memory_Acess(REGISTER_BANK &registers,Instruction_Data &data);
-    void Write_Back(Instruction_Data &data);
+    void Memory_Acess(REGISTER_BANK &registers,Instruction_Data &data, MainMemory &memory);
+    void Write_Back(Instruction_Data &data, MainMemory &memory,REGISTER_BANK &registers);
 };
 
-#endif;
+#endif
