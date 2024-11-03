@@ -14,9 +14,9 @@ Arquitetura de Von Neumann
 
 A arquitetura de Von Neumann, ou Arquitetura de Princeton, é um modelo de computadores digitais, proposto por John Von Neumann em 1945, e serve de base para as arquiteturas modernas. Seus principais componentes incluem:
 
-- **Unidade de Processamento: composta pela Unidade Lógica e Aritmética (ULA) e a Unidade de Controle.
-- **Unidade de Memória: armazena dados e instruções do programa.
-- **Mecanismos de Entrada/Saída (I/O): permite a interação com o ambiente externo.
+- **Unidade de Processamento:** composta pela Unidade Lógica e Aritmética (ULA) e a Unidade de Controle.
+- **Unidade de Memória:** armazena dados e instruções do programa.
+- **Mecanismos de Entrada/Saída (I/O):** permite a interação com o ambiente externo.
 
 ## Arquitetura MIPS
 
@@ -26,33 +26,36 @@ A arquitetura MIPS é baseada na família de arquiteturas RISC e é amplamente u
 
 A CPU implementada neste projeto é composta por três partes principais: ULA, Unidade de Controle e Registradores. O ciclo de execução de instruções ocorre em cinco etapas:
 
-IF (Instruction Fetch): busca da próxima instrução.
-ID (Instruction Decode): decodificação e identificação dos componentes necessários.
-EX (Execute): execução de operações na ULA.
-MEM (Memory Access): leitura/escrita na memória.
-WB (Write Back): armazenamento do resultado.
-A técnica de Pipeline permite a execução simultânea de instruções em estágios diferentes, aumentando a eficiência da CPU.
+- **IF (Instruction Fetch):** busca da próxima instrução.
+- **ID (Instruction Decode):** decodificação e identificação dos componentes necessários.
+- **EX (Execute):** execução de operações na ULA.
+- **MEM (Memory Access):** leitura/escrita na memória.
+- **WB (Write Back):** armazenamento do resultado.
+- **A técnica de Pipeline:** permite a execução simultânea de instruções em estágios diferentes, aumentando a eficiência da CPU.
 
-ULA (Unidade Lógica e Aritmética)
+## ULA (Unidade Lógica e Aritmética)
+
 A ULA realiza operações aritméticas e lógicas e inclui uma flag de overflow, que indica se o resultado excede a capacidade de representação.
 
-Operações Implementadas
-Aritméticas: ADD, SUB, MUL, DIV
-Controle de Fluxo: BEQ, BNE, BLT, BGT, BGTI, BLTI
-Transferência de Dados: LW, LA, ST
-Unidade de Controle (Control Unit)
-A Unidade de Controle coordena a execução das instruções, determinando a sequência e os operandos utilizados em cada instrução.
+### Operações Implementadas
+- **Aritméticas:** ADD, SUB, MUL, DIV
+- **Controle de Fluxo:** BEQ, BNE, BLT, BGT, BGTI, BLTI
+- **Transferência de Dados:** LW, LA, ST
+- **Unidade de Controle (Control Unit):** A Unidade de Controle coordena a execução das instruções, determinando a sequência e os operandos utilizados em cada instrução.
 
-Registradores
+## Registradores
 Os registradores servem para o armazenamento temporário de dados e informações de controle. Entre eles, temos:
 
-Específicos: pc, mar, cr, epc, sr, hi, lo, ir
-Uso Geral: zero, at, v0-v1, a0-a3, t0-t9, s0-s7, k0-k1, gp, sp, fp, ra
-Estrutura de Memória
-MEMORYCELL e MAINMEMORY
+- **Específicos:** pc, mar, cr, epc, sr, hi, lo, ir
+- **Uso Geral:** zero, at, v0-v1, a0-a3, t0-t9, s0-s7, k0-k1, gp, sp, fp, ra
+
+  
+## Estrutura de Memória
+
+### MEMORYCELL e MAINMEMORY
 Essas estruturas gerenciam o armazenamento volátil (RAM), onde os dados temporários e as instruções em uso pela CPU são armazenados.
 
-SECONDARY_MEMORY
+### SECONDARY_MEMORY
 Armazena programas e dados de longo prazo. A memória inclui funcionalidades para leitura, escrita e operações de inversão de leitura.
 
 Instruções Suportadas
