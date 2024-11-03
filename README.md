@@ -58,18 +58,19 @@ Essas estruturas gerenciam o armazenamento volátil (RAM), onde os dados tempor�
 ### SECONDARY_MEMORY
 Armazena programas e dados de longo prazo. A memória inclui funcionalidades para leitura, escrita e operações de inversão de leitura.
 
-Instruções Suportadas
-Aritméticas: add, sub, div, mult
-Condicionais: beq, bne, bgt, bgti, blt, blti
-Controle de Fluxo: j
-Transferência de Dados: lw, sw, li, la
-Saída: print
+## Instruções Suportadas
+
+- **Aritméticas:** add, sub, div, mult
+- **Condicionais:** beq, bne, bgt, bgti, blt, blti
+- **Controle de Fluxo:** j
+- **Transferência de Dados:** lw, sw, li, la
+- **Saída:** print
+  
 Além disso, o processador suporta a declaração de variáveis inteiras e vetores, bem como o uso de labels para controle de fluxo.
 Exemplo de código em assembly:
 
-asm
-Copiar código
-main:
+```
+    main:
   li $t0 0
   li $t1 10
   li $t3 100
@@ -79,5 +80,7 @@ loop:
   print $t0
   add $t0 $zero $t1
   blt $t0 $t3 loop
+```
+
 Compilação e Execução
 O projeto utiliza o CMake para facilitar o processo de compilação. Siga os passos abaixo para compilar e executar o código:
