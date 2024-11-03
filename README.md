@@ -14,9 +14,9 @@ Arquitetura de Von Neumann
 
 A arquitetura de Von Neumann, ou Arquitetura de Princeton, é um modelo de computadores digitais, proposto por John Von Neumann em 1945, e serve de base para as arquiteturas modernas. Seus principais componentes incluem:
 
-Unidade de Processamento: composta pela Unidade Lógica e Aritmética (ULA) e a Unidade de Controle.
-Unidade de Memória: armazena dados e instruções do programa.
-Mecanismos de Entrada/Saída (I/O): permite a interação com o ambiente externo.
+- **Unidade de Processamento: composta pela Unidade Lógica e Aritmética (ULA) e a Unidade de Controle.
+- **Unidade de Memória: armazena dados e instruções do programa.
+- **Mecanismos de Entrada/Saída (I/O): permite a interação com o ambiente externo.
 
 ## Arquitetura MIPS
 
