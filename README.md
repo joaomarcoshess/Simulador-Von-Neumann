@@ -82,5 +82,30 @@ loop:
   blt $t0 $t3 loop
 ```
 
-Compilação e Execução
+## Compilação e Execução
 O projeto utiliza o CMake para facilitar o processo de compilação. Siga os passos abaixo para compilar e executar o código:
+
+**1:** Execute o CMake para limpar a última compilação e criar os arquivos de build:
+
+```
+cmake CMakeLists.txt
+```
+
+**2:** Compile o programa com o GCC:
+
+```
+make
+```
+
+**3:** Monte o arquivo de exemplo para obter o binário:
+
+```
+./Assembler testes/example.asm
+mv output.bin testes
+```
+
+**4:** Execute o binário com a máquina de Von Neumann customizada:
+
+```
+./CustomVonNeumannMachine testes/output.bin
+```
