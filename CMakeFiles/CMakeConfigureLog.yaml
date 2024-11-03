@@ -28,7 +28,7 @@ events:
       Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "a.out"
       
       The C compiler identification is GNU, found in:
-        /home/dark/Desktop/Facul/CustomVonNeumannMachine/CMakeFiles/3.30.5/CompilerIdC/a.out
+        /home/Jaum/SO/CustomVonNeumannMachine/CMakeFiles/3.30.5/CompilerIdC/a.out
       
   -
     kind: "message-v1"
@@ -50,7 +50,7 @@ events:
       Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "a.out"
       
       The CXX compiler identification is GNU, found in:
-        /home/dark/Desktop/Facul/CustomVonNeumannMachine/CMakeFiles/3.30.5/CompilerIdCXX/a.out
+        /home/Jaum/SO/CustomVonNeumannMachine/CMakeFiles/3.30.5/CompilerIdCXX/a.out
       
   -
     kind: "try_compile-v1"
@@ -61,8 +61,8 @@ events:
     checks:
       - "Detecting C compiler ABI info"
     directories:
-      source: "/home/dark/Desktop/Facul/CustomVonNeumannMachine/CMakeFiles/CMakeScratch/TryCompile-AvmqL0"
-      binary: "/home/dark/Desktop/Facul/CustomVonNeumannMachine/CMakeFiles/CMakeScratch/TryCompile-AvmqL0"
+      source: "/home/Jaum/SO/CustomVonNeumannMachine/CMakeFiles/CMakeScratch/TryCompile-AvmqL0"
+      binary: "/home/Jaum/SO/CustomVonNeumannMachine/CMakeFiles/CMakeScratch/TryCompile-AvmqL0"
     cmakeVariables:
       CMAKE_C_FLAGS: ""
       CMAKE_C_FLAGS_DEBUG: "-g"
@@ -71,11 +71,11 @@ events:
       variable: "CMAKE_C_ABI_COMPILED"
       cached: true
       stdout: |
-        Change Dir: '/home/dark/Desktop/Facul/CustomVonNeumannMachine/CMakeFiles/CMakeScratch/TryCompile-AvmqL0'
+        Change Dir: '/home/Jaum/SO/CustomVonNeumannMachine/CMakeFiles/CMakeScratch/TryCompile-AvmqL0'
         
         Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_cb0a2/fast
         /usr/bin/make  -f CMakeFiles/cmTC_cb0a2.dir/build.make CMakeFiles/cmTC_cb0a2.dir/build
-        make[1]: Entering directory '/home/dark/Desktop/Facul/CustomVonNeumannMachine/CMakeFiles/CMakeScratch/TryCompile-AvmqL0'
+        make[1]: Entering directory '/home/Jaum/SO/CustomVonNeumannMachine/CMakeFiles/CMakeScratch/TryCompile-AvmqL0'
         Building C object CMakeFiles/cmTC_cb0a2.dir/CMakeCCompilerABI.c.o
         /usr/bin/cc   -v -o CMakeFiles/cmTC_cb0a2.dir/CMakeCCompilerABI.c.o -c /usr/share/cmake/Modules/CMakeCCompilerABI.c
         Using built-in specs.
@@ -125,7 +125,7 @@ events:
         /usr/bin/ld -plugin /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/lto-wrapper -plugin-opt=-fresolution=/tmp/ccOv7VFV.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --build-id --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -o cmTC_cb0a2 /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/../../../../lib/Scrt1.o /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/../../../../lib/crti.o /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/crtbeginS.o -L/usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1 -L/usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/../../../../lib -L/lib/../lib -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/../../.. -v CMakeFiles/cmTC_cb0a2.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/crtendS.o /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/../../../../lib/crtn.o
         GNU ld (GNU Binutils) 2.43.0
         COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_cb0a2' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_cb0a2.'
-        make[1]: Leaving directory '/home/dark/Desktop/Facul/CustomVonNeumannMachine/CMakeFiles/CMakeScratch/TryCompile-AvmqL0'
+        make[1]: Leaving directory '/home/Jaum/SO/CustomVonNeumannMachine/CMakeFiles/CMakeScratch/TryCompile-AvmqL0'
         
       exitCode: 0
   -
@@ -160,11 +160,11 @@ events:
       Parsed C implicit link information:
         link line regex: [^( *|.*[/\\])(ld[0-9]*(\\.[a-z]+)?|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
         linker tool regex: [^[ 	]*(->|")?[ 	]*(([^"]*[/\\])?(ld[0-9]*(\\.[a-z]+)?))("|,| |$)]
-        ignore line: [Change Dir: '/home/dark/Desktop/Facul/CustomVonNeumannMachine/CMakeFiles/CMakeScratch/TryCompile-AvmqL0']
+        ignore line: [Change Dir: '/home/Jaum/SO/CustomVonNeumannMachine/CMakeFiles/CMakeScratch/TryCompile-AvmqL0']
         ignore line: []
         ignore line: [Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_cb0a2/fast]
         ignore line: [/usr/bin/make  -f CMakeFiles/cmTC_cb0a2.dir/build.make CMakeFiles/cmTC_cb0a2.dir/build]
-        ignore line: [make[1]: Entering directory '/home/dark/Desktop/Facul/CustomVonNeumannMachine/CMakeFiles/CMakeScratch/TryCompile-AvmqL0']
+        ignore line: [make[1]: Entering directory '/home/Jaum/SO/CustomVonNeumannMachine/CMakeFiles/CMakeScratch/TryCompile-AvmqL0']
         ignore line: [Building C object CMakeFiles/cmTC_cb0a2.dir/CMakeCCompilerABI.c.o]
         ignore line: [/usr/bin/cc   -v -o CMakeFiles/cmTC_cb0a2.dir/CMakeCCompilerABI.c.o -c /usr/share/cmake/Modules/CMakeCCompilerABI.c]
         ignore line: [Using built-in specs.]
@@ -289,8 +289,8 @@ events:
     checks:
       - "Detecting CXX compiler ABI info"
     directories:
-      source: "/home/dark/Desktop/Facul/CustomVonNeumannMachine/CMakeFiles/CMakeScratch/TryCompile-llte4x"
-      binary: "/home/dark/Desktop/Facul/CustomVonNeumannMachine/CMakeFiles/CMakeScratch/TryCompile-llte4x"
+      source: "/home/Jaum/SO/CustomVonNeumannMachine/CMakeFiles/CMakeScratch/TryCompile-llte4x"
+      binary: "/home/Jaum/SO/CustomVonNeumannMachine/CMakeFiles/CMakeScratch/TryCompile-llte4x"
     cmakeVariables:
       CMAKE_CXX_FLAGS: ""
       CMAKE_CXX_FLAGS_DEBUG: "-g"
@@ -304,7 +304,7 @@ events:
         
         Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_8422e/fast
         /usr/bin/make  -f CMakeFiles/cmTC_8422e.dir/build.make CMakeFiles/cmTC_8422e.dir/build
-        make[1]: Entering directory '/home/dark/Desktop/Facul/CustomVonNeumannMachine/CMakeFiles/CMakeScratch/TryCompile-llte4x'
+        make[1]: Entering directory '/home/Jaum/SO/CustomVonNeumannMachine/CMakeFiles/CMakeScratch/TryCompile-llte4x'
         Building CXX object CMakeFiles/cmTC_8422e.dir/CMakeCXXCompilerABI.cpp.o
         /usr/bin/c++   -v -o CMakeFiles/cmTC_8422e.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake/Modules/CMakeCXXCompilerABI.cpp
         Using built-in specs.
@@ -398,7 +398,7 @@ events:
       Parsed CXX implicit link information:
         link line regex: [^( *|.*[/\\])(ld[0-9]*(\\.[a-z]+)?|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
         linker tool regex: [^[ 	]*(->|")?[ 	]*(([^"]*[/\\])?(ld[0-9]*(\\.[a-z]+)?))("|,| |$)]
-        ignore line: [Change Dir: '/home/dark/Desktop/Facul/CustomVonNeumannMachine/CMakeFiles/CMakeScratch/TryCompile-llte4x']
+        ignore line: [Change Dir: '/home/Jaum/SO/CustomVonNeumannMachine/CMakeFiles/CMakeScratch/TryCompile-llte4x']
         ignore line: []
         ignore line: [Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_8422e/fast]
         ignore line: [/usr/bin/make  -f CMakeFiles/cmTC_8422e.dir/build.make CMakeFiles/cmTC_8422e.dir/build]
