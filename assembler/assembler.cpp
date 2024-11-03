@@ -1,12 +1,3 @@
-/* TODO
-- Put end instruction at the end of each label
-
-OPT:
-- lw $t0 (offset)$t1) syntax
-- jal for function call
-- jr for return
-*/
-
 #include <iostream>
 #include <fstream>
 #include <sstream>
@@ -34,7 +25,7 @@ const unordered_map<string, int> instructionMap = {
     {"sw", 0b001101},
     {"li", 0b001110},
     {"la", 0b001111},
-    {"print", 0b001000},
+    {"print", 0b010000},
     {"end",0b111111}
 };
 
@@ -71,20 +62,20 @@ const unordered_map<string, int> registerMap = {
     {"$gp", 0b11101},   // Global pointer
     {"$sp", 0b11110},   // Stack pointer
     {"$fp", 0b11111},   // Frame pointer
-    {"$s8", 0b10000}    // Saved 8 (also $f0 in floating point)
 };
 
 unordered_map<string, vector<int>> dataMap;
 
 string encodeRType(string op, int rs, int rt, int rd, int shamt) {
+    int opcode = instructionMap.at(op);
     int funct = instructionMap.at(op);
-    bitset<6> opcode(0); // R-type has opcode 0
+    bitset<6> opcodeBits(opcode); // R-type has opcode 0
     bitset<5> rsBits(rs);
     bitset<5> rtBits(rt);
     bitset<5> rdBits(rd);
     bitset<5> shamtBits(shamt);
     bitset<6> functBits(funct);
-    return (opcode.to_string() + rsBits.to_string() + rtBits.to_string() + 
+    return (opcodeBits.to_string() + rsBits.to_string() + rtBits.to_string() + 
             rdBits.to_string() + shamtBits.to_string() + functBits.to_string());
 }
 
@@ -218,7 +209,7 @@ void processAssemblyFile(const string &filename, string &output) {
                         output += "\n";
                     }                
 
-                } else if (instruction == "beq" || instruction == "bne" || instruction == "bgt" || instruction == "blt") {
+                } else if (instruction == "beq" || instruction == "bne" || instruction == "bgt" || instruction == "blt" || instruction == "blti" || instruction == "bgti") {
                     string rsStr, rtStr, immediate;
                     iss >> rsStr >> rtStr >> immediate; 
                     rs = getRegisterCode(rsStr);
@@ -231,10 +222,10 @@ void processAssemblyFile(const string &filename, string &output) {
 
                 } else if (instruction == "j") {
                     string addrStr;
-                   
+
                     try {
                         iss >> addrStr; 
-                        output += padInstruction(encodeJType(instruction, addrStr));
+                        output += padInstruction(encodeIType(instruction,0,0, addrStr));
                         output += "\n";                    
                     } catch (invalid_argument&) {
                             cerr << "Error: Invalid address \"" << addrStr << "\" in instruction at line " << lineNum << endl;
@@ -252,13 +243,13 @@ void processAssemblyFile(const string &filename, string &output) {
                 }
                 
                 else if (instruction == "lw" || instruction == "sw") {
-                    string rsStr, varName;
-                    iss >> rsStr >> varName; 
-                    rs = getRegisterCode(rsStr);
+                    string rtStr, varName;
+                    iss >> rtStr >> varName; 
+                    rt = getRegisterCode(rtStr);
 
                     if (rs != -1 ) {
                         if (dataMap.find(varName) != dataMap.end()) {
-                            output += padInstruction(encodeIType(instruction, rs, 0, varName));
+                            output += padInstruction(encodeIType(instruction, 0, rt, varName));
                             output += "\n";
                         } else {
                             cerr << "Error: Variable \"" << varName << "\" not found in data section." << endl;
