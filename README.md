@@ -55,7 +55,46 @@ Os registradores servem para o armazenamento temporário de dados e informaçõe
 
 - **Específicos:** pc, mar, cr, epc, sr, hi, lo, ir
 - **Uso Geral:** zero, at, v0-v1, a0-a3, t0-t9, s0-s7, k0-k1, gp, sp, fp, ra
+- **value:** Valor de 32 bits armazenado no registrador.
 
+  
+### Funções
+
+- **REGISTER():** Construtor que inicializa o valor com 0.
+- **write(uint32_t new_value):** Escreve um novo valor no registrador.
+- **read() const:** Lê o valor do registrador.
+- **reverse_read() const:** Lê o inverso do valor salvo no registrador.
+
+  
+## REGISTER_BANK
+Conjunto de registradores que proporciona armazenamento temporário para múltiplos dados. Esta implementação contém registradores de uso específico e de uso geral.
+
+### Registradores de Uso Específico
+
+- **pc:** Program Counter
+- **mar:** Memory Address Register
+- **cr:** Cause Register
+- **epc:** Exception Program Counter
+- **sr:** Status Register
+- **hi, lo:** Armazenam resultados de operações de 32 bits
+- **ir:** Instruction Register
+
+  
+### Registradores de Uso Geral
+
+- **zero:** Sempre contém 0
+- **at:** Reservado para o assembler
+- **v0, v1:** Valores de retorno de funções
+- **a0 - a3:** Argumentos para chamadas de função
+- **t0 - t9:** Registradores temporários
+- **s0 - s7:** Registradores salvos
+- **k0, k1:** Reservados para o sistema operacional
+- **gp, sp, fp, ra:** Global Pointer, Stack Pointer, Frame Pointer, Return Address
+
+### Funções
+
+- **REGISTER_BANK():** Construtor que inicializa o banco de registradores.
+- **print_registers() const:** Imprime os valores de todos os registradores do banco.
   
 ## Estrutura de Memória
 
