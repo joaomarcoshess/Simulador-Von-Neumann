@@ -1,23 +1,29 @@
-1º Trabalho Prático - Sistemas Operacionais
-Este repositório contém a documentação e código para o desenvolvimento de um processador baseado na arquitetura de Von Neumann, inspirado na arquitetura MIPS, como parte do 1º Trabalho Prático da disciplina de Sistemas Operacionais do 6º período de Engenharia de Computação no CEFET-MG Campus Divinópolis.
+# Simulador de Von Neumann
+Neste repositório, é encontrada a documentação e o código para o desenvolvimento de um processador baseado na arquitetura de Von Neumann, inspirado na arquitetura MIPS, como parte do 1º Trabalho Prático da disciplina de Sistemas Operacionais do 6º período de Engenharia de Computação no CEFET-MG Campus Divinópolis.
 
 Professor: Michel Pires Dias
 Disciplina: Sistemas Operacionais
 
-Introdução
+## Introdução
+
 O objetivo deste projeto é desenvolver um processador simplificado que implementa a arquitetura de Von Neumann. Embora a base seja a arquitetura MIPS, o processador implementado inclui apenas funcionalidades essenciais para criar uma versão minimalista de um CPU.
 
-Contexto
+## Perspectiva do Trabalho
+
 Arquitetura de Von Neumann
+
 A arquitetura de Von Neumann, ou Arquitetura de Princeton, é um modelo de computadores digitais, proposto por John Von Neumann em 1945, e serve de base para as arquiteturas modernas. Seus principais componentes incluem:
 
 Unidade de Processamento: composta pela Unidade Lógica e Aritmética (ULA) e a Unidade de Controle.
 Unidade de Memória: armazena dados e instruções do programa.
 Mecanismos de Entrada/Saída (I/O): permite a interação com o ambiente externo.
-Arquitetura MIPS
+
+## Arquitetura MIPS
+
 A arquitetura MIPS é baseada na família de arquiteturas RISC e é amplamente utilizada em contexto educacional devido à sua simplicidade. Com diversas versões, ela foi uma referência para outras arquiteturas RISC. Atualmente, a empresa MIPS Technologies está desenvolvendo uma nova arquitetura baseada na família RISC-V.
 
-Componentes da CPU
+## Componentes da CPU
+
 A CPU implementada neste projeto é composta por três partes principais: ULA, Unidade de Controle e Registradores. O ciclo de execução de instruções ocorre em cinco etapas:
 
 IF (Instruction Fetch): busca da próxima instrução.
