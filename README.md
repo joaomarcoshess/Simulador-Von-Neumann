@@ -2,6 +2,7 @@
 Neste repositório, é encontrada a documentação e o código para o desenvolvimento de um processador baseado na arquitetura de Von Neumann, inspirado na arquitetura MIPS, como parte do 1º Trabalho Prático da disciplina de Sistemas Operacionais do 6º período de Engenharia de Computação no CEFET-MG Campus Divinópolis.
 
 Professor: Michel Pires Dias
+
 Disciplina: Sistemas Operacionais
 
 ## Introdução
@@ -109,3 +110,8 @@ mv output.bin testes
 ```
 ./CustomVonNeumannMachine testes/output.bin
 ```
+
+## Colaborador:
+
+João Marcos Silva Hess
+marcosjoaohess@gmail.com
