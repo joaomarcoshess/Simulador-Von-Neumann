@@ -44,6 +44,12 @@ A ULA realiza operações aritméticas e lógicas e inclui uma flag de overflow,
 - **Transferência de Dados:** LW, LA, ST
 - **Unidade de Controle (Control Unit):** A Unidade de Controle coordena a execução das instruções, determinando a sequência e os operandos utilizados em cada instrução.
 
+### Atributos
+- **A, B: Entradas A e B da ALU:** que recebem operandos de 32 bits.
+- **result:** Resultado da operação (32 bits com sinal).
+- **overflow:** Flag de overflow.
+- **op:** Operação a ser realizada.
+
 ## Registradores
 Os registradores servem para o armazenamento temporário de dados e informações de controle. Entre eles, temos:
 
